@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: white; /* plain white */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        main {
+            background-color: #e6ccff; /* light violet inside box */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #6a0dad; /* darker violet */
+            margin-bottom: 20px;
+        }
+        .user-pass input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .options a {
+            text-decoration: none;
+            color: #6a0dad;
+        }
+        input[type="submit"] {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        input[type="submit"]:hover {
+            background-color: #5b0bb5;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="login-text">
+                <h2>LOGIN</h2>
+            </div>
+            <form method="POST" action="login.php">
+                <div class="user-pass">
+                    <input placeholder="USERNAME" autocomplete="off" type="text" name="user" required>
+                    <input placeholder="PASSWORD" autocomplete="off" type="password" name="pass" required>
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="remember_me"> Remember me
+                    </label>
+                    <a href="#">Forgot?</a>
+                </div>
+                <input type="submit" value="LOGIN">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
